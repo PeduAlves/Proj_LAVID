@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { application, Router } from "express";
 
 const router = Router();
 
