@@ -1,6 +1,7 @@
 import "reflect-metadata"
 import express, { Request, Response } from "express";
 
+import "./database";
 const app = express();
 
 app.get("/test", (request:Request,response:Response)=>{
