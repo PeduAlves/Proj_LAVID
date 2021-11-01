@@ -16,9 +16,6 @@ export class classificados{
     @Column()
     drogas: boolean
 
-    @Column()
-    alcool:boolean
-
     @CreateDateColumn()
     created_at: Date
 

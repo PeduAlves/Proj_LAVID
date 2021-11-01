@@ -25,10 +25,6 @@ export class classificados1635797795607 implements MigrationInterface {
                         type:"boolean",
                     },
                     {
-                        name:"alcool",
-                        type:"boolean",
-                    }, 
-                    {
                         name:"created_at",
                         type:"timestamp",
                         default:"now()",
