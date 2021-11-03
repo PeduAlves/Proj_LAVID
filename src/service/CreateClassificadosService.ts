@@ -11,17 +11,18 @@ class CreateClassificadosService{
         if(!id){
             throw new Error("Nome não reconhecido")
         }
-        const userAlreadyExist = await userRepository.findOne({where:{id:id}})
-        if(!userAlreadyExist){
-            throw new Error("Nome naão existente")
+        const userExisting = await userRepository.findOne({where:{id:id}})
+        if(!userExisting){
+            throw new Error("Nome não existente")
         }
+        
         var idoso=false, drogas=false;
 
         const classificadosRepository = getCustomRepository(ClassificadosRepositories)
-        if(userAlreadyExist.idade>=60){
+        if(userExisting.idade>=60){
             idoso = true
         }
-        if(userAlreadyExist.dependente != "none"){
+        if(userExisting.dependente != "none"){
             drogas = true
         }
 

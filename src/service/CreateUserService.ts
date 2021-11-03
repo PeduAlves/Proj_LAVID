@@ -12,10 +12,18 @@ interface IUser{
 class CreateUserService{
     async execute({nome, sexo, idade,dependente = "none",estado}:IUser){
         const userRepository = getCustomRepository(UsersRepositories)
-        if(!nome || !sexo || !idade || !dependente || !estado){
-            throw new Error("Campo não preenchido")
+        if(!nome){
+            throw new Error("Campo nome não preenchido")
         }
-    
+        if(!sexo){
+            throw new Error("Campo sexo não preenchido")
+        }
+        if(!idade){
+            throw new Error("Campo idade não preenchido")
+        }
+        if(!estado){
+            throw new Error("Campo estado não preenchido")
+        }
         const user = userRepository.create({nome, sexo, idade, dependente, estado})
         await userRepository.save(user)
 
