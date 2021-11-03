@@ -25,7 +25,10 @@ class CreateClassificadosService{
         if(userExisting.dependente != "none"){
             drogas = true
         }
-
+        if(idoso == false && drogas == false){
+            const classificado = {message :" Usuario não classificado (idoso ou dependente de drogas)"}
+            return classificado
+        }
         const classificado = classificadosRepository.create({
             fknome:id,
             idoso:idoso,
