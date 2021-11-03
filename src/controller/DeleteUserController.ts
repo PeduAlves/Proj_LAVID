@@ -11,5 +11,6 @@ class DeleteUserController{
         return response.status(200).json(result);
     }
 
+
 }
 export {DeleteUserController}

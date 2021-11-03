@@ -10,7 +10,8 @@ class DeleteUserService{
         if(!userExist){
             throw new Error("O usuario não existe")
         }
-        await userRepository.delete(userExist.id)
+        await userRepository.delete(userExist)
+    
         const userDeleted = {
             message: "Usuario deletado com sucesso"
         }
