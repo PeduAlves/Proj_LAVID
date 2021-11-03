@@ -1,10 +1,10 @@
 import { application, Router } from "express";
-import { CreateUserControler } from "./controller/CreateUserControler";
+import { CreateUserController } from "./controller/CreateUserController";
 
 const router = Router();
 
 
-const createUserController = new CreateUserControler()
+const createUserController = new CreateUserController()
 
 router.post("/user",createUserController.handle)
 

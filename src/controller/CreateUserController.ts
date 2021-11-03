@@ -4,7 +4,7 @@ import { CreateUserService } from "../service/CreateUserService";
 
 
 
-class CreateUserControler{
+class CreateUserController{
     async handle(request:Request, response:Response){
         const {nome, sexo, idade, dependente, estado} = request.body
         const createUserService = new CreateUserService()
@@ -16,5 +16,5 @@ class CreateUserControler{
     }
 }
 
-export{CreateUserControler}
+export{CreateUserController}
     
