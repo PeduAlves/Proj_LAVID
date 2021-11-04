@@ -6,9 +6,9 @@ import { ReadUserService } from "../service/ReadUserService";
 
 class ReadUserController{
     async handle(request:Request, response:Response){
-        const UserNome = request.body
+        const userNome = request.body
         const readUserService = new ReadUserService()
-        const ReadUser = await readUserService.execute(UserNome)
+        const ReadUser = await readUserService.execute(userNome)
         return response.status(200).json(ReadUser)
 
     }

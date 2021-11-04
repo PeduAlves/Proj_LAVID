@@ -1,5 +1,6 @@
-import {Entity, PrimaryColumn,Column, CreateDateColumn, UpdateDateColumn} from "typeorm";
+import {Entity, PrimaryColumn,Column, CreateDateColumn, UpdateDateColumn, JoinColumn, OneToOne} from "typeorm";
 import { v4 as uuid } from "uuid";
+import { users } from "./users";
 
 @Entity()
 export class classificados{
@@ -9,6 +10,10 @@ export class classificados{
 
     @Column()
     fknome: string
+
+    @JoinColumn({name:"fknome"})
+    @OneToOne(()=>users,{onDelete:"CASCADE"})
+    nome: users
 
     @Column()
     idoso: boolean

@@ -4,9 +4,9 @@ import { UsersRepositories } from "../repositories/usersrepositories";
 
 
 class ReadUserService{
-    async execute({UserNome}){
+    async execute({userNome}){
         const userRepository = getCustomRepository(UsersRepositories)
-        const user = await userRepository.findOne({where:{nome:UserNome}})
+        const user = await userRepository.find({where:{nome:userNome}})
         if(!user){
             throw new Error("O usuario não existe")
         }

@@ -41,7 +41,7 @@ export class classificados1635797795607 implements MigrationInterface {
                         referencedTableName:"users",
                         referencedColumnNames:["id"],
                         columnNames:["fknome"],
-                        onDelete:"SET NULL",
+                        onDelete:"CASCADE",
                         onUpdate:"SET NULL",
                     }
                 ]

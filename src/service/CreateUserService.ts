@@ -27,7 +27,6 @@ class CreateUserService{
         const user = userRepository.create({nome, sexo, idade, dependente, estado})
         await userRepository.save(user)
 
-
         return user
     
     }
