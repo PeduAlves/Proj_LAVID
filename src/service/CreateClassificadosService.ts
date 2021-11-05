@@ -1,7 +1,7 @@
 import { getCustomRepository } from "typeorm";
-import { users } from "../entities/users";
-import { ClassificadosRepositories } from "../repositories/ClassificadosRepositories";
-import { UsersRepositories } from "../repositories/usersrepositories";
+import { users } from "../Entities/Users";
+import { ClassificadosRepositories } from "../Repositories/ClassificadosRepositories";
+import { UsersRepositories } from "../Repositories/UsersRepositories";
 
 
 

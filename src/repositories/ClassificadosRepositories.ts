@@ -1,5 +1,5 @@
 import { EntityRepository, Repository } from "typeorm";
-import { classificados } from "../entities/classificados";
+import { classificados } from "../Entities/Classificados";
 
 
 

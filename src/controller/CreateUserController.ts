@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { CreateClassificadosService } from "../service/CreateClassificadosService";
-import { CreateUserService } from "../service/CreateUserService";
+import { CreateUserEspecialService, CreateUserService } from "../service/CreateUserService";
 
 
 
@@ -16,5 +16,15 @@ class CreateUserController{
     }
 }
 
-export{CreateUserController}
+class CreateUserEspecialController{
+    async handle(request:Request, response:Response){
+        const {nome, sexo, idade, estado, instituicao, vendedor, cuidador, voluntario, pesquisador} = request.body
+        const createUserEspecialService = new CreateUserEspecialService
+        const userEspecial = await createUserEspecialService.execute(
+            {nome, sexo, idade, estado, instituicao, vendedor, cuidador, voluntario, pesquisador})
+        return response.status(200).json(userEspecial)
+    }
+}
+
+export{CreateUserController, CreateUserEspecialController}
     

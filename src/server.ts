@@ -1,9 +1,9 @@
 import "reflect-metadata"
 import express, { application, Request, Response, NextFunction, response } from "express";
 import "express-async-errors"
-import { router } from "./routes";
+import { router } from "./Routes";
 
-import "./database";
+import "./Database";
 const app = express();
 
 app.use(express.json() );

@@ -1,6 +1,6 @@
 import {Entity, PrimaryColumn,Column, CreateDateColumn, UpdateDateColumn, JoinColumn, OneToOne} from "typeorm";
 import { v4 as uuid } from "uuid";
-import { users } from "./users";
+import { users } from "./Users";
 
 @Entity()
 export class classificados{

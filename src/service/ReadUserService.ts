@@ -1,5 +1,5 @@
 import { getCustomRepository } from "typeorm";
-import { UsersRepositories } from "../repositories/usersrepositories";
+import { UsersRepositories } from "../Repositories/UsersRepositories";
 
 
 
