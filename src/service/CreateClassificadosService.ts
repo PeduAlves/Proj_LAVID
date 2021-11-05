@@ -1,10 +1,10 @@
 import { getCustomRepository } from "typeorm";
-import { users } from "../entities/users";
 import { ClassificadosRepositories } from "../repositories/ClassificadosRepositories";
 import { UsersRepositories } from "../repositories/usersrepositories";
 
 
-
+// Criando a tabela de classificados, que sao os usuarios que tem dependencia a drogas
+// ou alcool, ou que tem mais de 60 anos, sendo assim idosos
 class CreateClassificadosService{
     async execute(id:string){
         const userRepository = getCustomRepository(UsersRepositories)

@@ -4,7 +4,7 @@ import { UsersRepositories } from "../repositories/usersrepositories";
 
 
 
-
+// Definindo os tipos de cada variavel que vai ser recebida
 interface IUser{
     id:string,
     nome:string, 
@@ -13,6 +13,9 @@ interface IUser{
     dependente:string,
     estado:string,
 }
+
+// Criando a função de modificar o usuario que vai receber as informações
+// a serem alteradas, e as que não forem recebidas permanecem iguais
 class ModifyUserService{
     async execute({
         id, nome= "none", sexo= "none",idade= null, dependente= "none", estado= "none"

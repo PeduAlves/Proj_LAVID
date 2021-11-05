@@ -1,7 +1,7 @@
 import { getCustomRepository } from "typeorm"
 import { UsersRepositories } from "../repositories/usersrepositories"
 
- 
+ // Definindo os tipos dos parametros a serem recebidos
 interface IUser{
     nome:string, 
     sexo:string,
@@ -9,6 +9,8 @@ interface IUser{
     dependente:string,
     estado:string,
 }
+// Criando a funcção de criação de novos usuarios, onde apenas o "dependente" não é
+// obrigatorio, considerando que o usuario nao é dependente, caso o campo esteja vazio
 class CreateUserService{
     async execute({nome, sexo, idade,dependente = "none",estado}:IUser){
         const userRepository = getCustomRepository(UsersRepositories)

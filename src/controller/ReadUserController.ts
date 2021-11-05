@@ -3,7 +3,8 @@ import { ReadUserService } from "../service/ReadUserService";
 
 
 
-
+// Definindo o controller que vai chamar a funçao de leitura, no service
+// e executa-la
 class ReadUserController{
     async handle(request:Request, response:Response){
         const userNome = request.body

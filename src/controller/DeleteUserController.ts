@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { DeleteUserService } from "../service/DeleteUserService";
 
 
-
+// definindo o controller que vai chamar e executar o service de delete
 class DeleteUserController{
     async handle(request:Request, response:Response){
         var {idUser} = request.query

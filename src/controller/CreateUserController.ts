@@ -3,7 +3,8 @@ import { CreateClassificadosService } from "../service/CreateClassificadosServic
 import { CreateUserService } from "../service/CreateUserService";
 
 
-
+// definindo o contorller que vai chamar e executar o serviço de criação de usuario
+// e o serviço de classificados que separa os usuarios dependentes e idosos dos demais
 class CreateUserController{
     async handle(request:Request, response:Response){
         const {nome, sexo, idade, dependente, estado} = request.body

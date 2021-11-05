@@ -2,6 +2,9 @@ import {Entity, PrimaryColumn,Column, CreateDateColumn, UpdateDateColumn, JoinCo
 import { v4 as uuid } from "uuid";
 import { users } from "./users";
 
+
+// Definindo a tabela de classificados, que so separa as pessoas idosas e dependentes
+// dos demais usuarios
 @Entity()
 export class classificados{
     

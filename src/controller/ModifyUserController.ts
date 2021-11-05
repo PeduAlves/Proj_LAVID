@@ -4,7 +4,7 @@ import { ModifyUserService } from "../service/ModifyUserService";
 
 
 
-
+// defindino o controller que vai chamar e executar o service modificar o usuario
 class ModifyUserController{
     async handle(request:Request, response:Response){
         const {id, nome, sexo, idade, dependente, estado} = request.body
