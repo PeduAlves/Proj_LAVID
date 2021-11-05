@@ -2,7 +2,7 @@
 
 * [Introdução](#Introdução)
 * [Sobre o projeto](#Sobre-o-projeto)
-* [Como executar o programa](#Como-executar-o-programa)
+* [Como executar](#Como-executar)
 
 
 <br>
